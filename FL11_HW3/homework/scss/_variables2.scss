@@ -1,0 +1,21 @@
+$logoColor: white;
+$underlineColor: #ff4e33;
+$bgImagePath: url('../img/m-h-night.jpg');
+$logoFont: 'Fresca', sans-serif;
+$headerFont: 'Source Sans Pro', sans-serif;
+$buttonColor: #e3ac00;
+$fromGradientColor: #dba008;
+$toGradientColor: #96334f;
+$bgBodyColor: #21232e;
+$footerColor: #3b3f50;
+
+$logoFont300: (
+  family: ('Fresca', sans-serif),
+  weight: 300,
+);
+
+$logoFont600:  (
+  family: ('Fresca', sans-serif),
+  weight: 600,
+  color: #fff
+);

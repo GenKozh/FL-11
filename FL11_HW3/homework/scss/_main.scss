@@ -1,0 +1,332 @@
+@mixin dayNight($bgImagePath) {
+   @if $bgImagePath == url('../img/m-h-day.jpg') {
+     color: #c0c3ce;
+   } 
+}
+
+@mixin logo {
+  display: inline-block;
+  color: white;
+  position: relative;
+  background-color: trasparent;
+  width: 55px;
+} 
+
+@mixin logoParagraph {
+  display: inline-block;
+  position: absolute;
+  font-size: 190%;
+  font-family: map-get($logoFont600, family);
+  font-weight: map-get($logoFont600, weight);
+  color: map-get($logoFont600, color);
+}
+
+@mixin logoSpan {
+  display: block;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  font-size: 42%;
+  font-family: $logoFont;
+  font-weight: 600;
+  color: $logoColor;
+  top: 40px;
+}
+
+@mixin buttonJoinUs {
+  position: absolute;
+  width: 180px;
+  height: 60px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  background-color: $buttonColor;
+  font-family: $headerFont;
+  font-size: 140%;
+  font-weight: 600;
+}
+
+body {
+  margin: 0;
+  background-color: $bgBodyColor;
+}
+
+.header {
+  background-image: $bgImagePath;
+  background-repeat: norepeat;
+  background-size: 1920px;
+  margin-top: -188px;
+  padding: 0;
+  height: 1090px;
+  z-index: 1;
+  position: relative;
+  border-bottom-right-radius: 40% 35%;
+  width: 1920px;
+
+   .header-wrap {
+    margin-left: 180px;
+    position: relative;
+    max-width: 900px;
+
+    .landing-logo {
+      & > img {
+        @include logo; 
+         margin-left: 12px;
+         margin-top: 212px;
+       }
+
+      & > img + p {
+        @include logoParagraph;
+        left: 85px;
+        top: 177px;
+      }
+
+      & > img + p > span{
+        @include logoSpan;
+      }
+    }
+    .header_heading{
+      font-size: 560%;
+      font-family: $headerFont;
+      font-weight: 900;
+      color: $logoColor;
+      line-height: 1;
+      margin-left: 15px;
+      margin-top: 88px;
+      position: relative;
+      margin-bottom: 45px;
+
+      &::after{
+        display: block;
+        width: 375px;
+        height: 30px;
+        content: '';
+        background-color: $underlineColor;
+        position: absolute;
+        z-index: -1; 
+        top: 150px;
+      }
+    }
+    .header_text {
+      font-size: 130%;
+      line-height: 1.45;
+      font-family: $logoFont;
+      color: $logoColor;
+      white-space: pre-wrap;
+      margin-left: -40px;
+      margin-bottom: 47px;
+    }
+    .header_button {
+      @include buttonJoinUs;
+      margin-left: 12px;
+    }  
+  }
+}
+
+main {
+  .section_text {
+    font-size: 330%;
+    font-family: $headerFont;
+    font-weight: 600;
+    color: $logoColor;
+    position: relative;
+    margin-bottom: 45px;
+    margin-top: 43px;
+    margin-left: 700px;
+
+    &::after {
+      display: block;
+      width: 238px;
+      height: 16px;
+      content: '';
+      background-color: $underlineColor;
+      position: absolute;
+      z-index: -1; 
+      top: 40px;
+      left: 270px;
+    }
+  }
+  .section_card_wrap {
+    display: flex;
+    width: 1540px;
+    padding-left: 190px;
+    padding-right: 190px;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 265px;
+
+    .section_card {
+      padding: 10px;
+      background-color: $footerColor; 
+      
+      border-radius: 7px;
+      height: 550px;
+      width: 475px;
+      position: relative;
+      text-align: center;
+      z-index: 1;
+
+      .section_card_img {
+        margin: 15px;
+        width: 445px;
+        border-radius: 7px;
+      }
+      .section_card_heading {
+        font-size: 190%;
+        font-family: $headerFont;
+        font-weight: 600;
+        color: white;
+        margin-top: 0px;
+        display: inline-block;
+        text-align: center;
+        position: relative;
+        margin-bottom: 5px;
+
+        .section_card_underline {
+          position: absolute;
+          top: 60%;
+          height: 16px;
+          width: 98%;
+          left: 1%;
+          background-color: $underlineColor;
+          z-index: -1; 
+        }
+      }
+      .section_card_text{
+        color: #bbc3ce;
+        font-size: 127%;
+        font-family: $logoFont;
+        margin-top: 0;
+        padding: 15px;
+        line-height: 1.5;
+      }
+      &:nth-child(3) {
+        .section_card_text{
+          margin-top: 15px;
+         }
+      }
+    }
+  }
+  .section_banner {
+    position: absolute; 
+    margin-top: -90px;
+    margin-left: 360px;
+    margin-right: 360px;
+    width: 1200px;
+    height: 180px;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, $fromGradientColor , $toGradientColor);
+    z-index: 1;
+
+    .section_banner_text_wrap {
+      padding-top: 30px;
+      padding-left: 130px;
+
+      .section_banner_heading {
+        font-size: 235%;
+        font-family: $headerFont;
+        font-weight: 900;
+        color: $logoColor;
+        margin-top: 0px;
+        display: inline-block;
+        text-align: center;
+        position: relative;
+        margin-bottom: 5px;
+
+        &::after{
+          display: block;
+          width: 75px;
+          height: 16px;
+          content: '';
+          background-color: $underlineColor;
+          position: absolute;
+          z-index: -1; 
+          top: 25px;
+          left: 150px;
+        }
+      }
+      .section_banner_text {
+        color: #bbc3ce;
+        font-size: 125%;
+        font-family: $logoFont;
+        margin-top: 0;
+        line-height: 1.5;
+        margin-top: 15px;
+      }
+    }
+    .section_banner_button {
+      @include buttonJoinUs;
+      margin-left: 895px;
+      margin-top: -90px;
+    }
+  }
+}
+
+footer {
+  display: block;
+  .footer-wrap{
+    @extend footer;
+    width: 1920px;
+    height: 300px;
+    background-color: $footerColor;
+    position: relative; 
+    display: flex;
+    align-items: center;
+    padding-top: 50px;
+
+    img {
+    @include logo;
+    margin-left: 190px;
+    margin-top: 0px;
+
+      & + p {
+        @include logoParagraph;
+        @include dayNight($bgImagePath);
+        top: 135px;
+        left: 265px;
+
+          & > span {
+            @include logoSpan;
+            @include dayNight($bgImagePath);
+          }
+       }
+    }
+    
+    .footer_logo.landing-logo {
+    display: inline-block;
+    width: 500px;
+    }
+
+    .footer_text {
+      width: 370px;
+      margin-left: 225px;
+      display: inline-block; 
+      color: #c0c3ce;
+      font-size: 110%;
+      font-family: map-get($logoFont300, family);
+      font-weight: map-get($logoFont300, weight);
+      line-height: 1.4;
+    }
+    
+    .footer-cr{
+      font-size: 120%;
+      font-family: map-get($logoFont300, family);
+      font-weight: map-get($logoFont300, weight);
+      display: inline-block; 
+      color: #c0c3ce;
+      margin-left: 400px;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
