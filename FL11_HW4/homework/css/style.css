@@ -320,10 +320,10 @@ body {
 .explore {
   position: absolute;
   top: 45%;
-  right: 20px;
+  right: 1vw;
   cursor: pointer;
   text-align: center;
-  padding: 10px;
+  padding: 1vw;
   width: 80%;
   background: rgba(9,119,116,0.8);
   border: inherit;
