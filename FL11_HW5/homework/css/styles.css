@@ -224,7 +224,7 @@ footer{
 }
 
 .post_image:hover, .post_decr:hover {
-   filter: opacity(50%);
+   filter: opacity(49%);
    cursor: pointer
   }
   
