@@ -34,7 +34,7 @@ while (dessisionToPlay !== null) {
       
       while (dessisionToPlay !== null && currentAttempt) {
         currentMaxNumber = ROUND_MAX_NUMBER + currentRound * ROUND_STEP;
-        secretNumber = Math.ceil(Math.random() * currentMaxNumber);
+        secretNumber = Math.round(Math.random() * currentMaxNumber);
         currentAttempt = ROUND_NUMBER;
         
         while(dessisionToPlay !== null && currentAttempt && secretNumber !== SECRET_NUMBER_RESET) {
@@ -65,7 +65,7 @@ while (dessisionToPlay !== null) {
           }
         }
       }
-      
+
       if (currentAttempt === 0 || dessisionToPlay === null) {
         
         thanksForParticipationString = `Thank you for your participation. Your prize is: ${totalPrize} $`;
