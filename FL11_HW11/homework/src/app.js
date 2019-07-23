@@ -59,7 +59,7 @@ function App() {
         inputField[0].disabled = true;
       }
 
-      [].forEach.call(listItems, function(item) {
+      [].forEach.call(listItems, item => {
         item.addEventListener('dragstart', handleDragStart, false);
         item.addEventListener('dragenter', handleDragEnter, false);
         item.addEventListener('dragover', handleDragOver, false);
@@ -68,16 +68,16 @@ function App() {
         item.addEventListener('dragend', handleDragEnd, false);
       });
 
-      [].forEach.call(checkIcons, function(item) {
+      [].forEach.call(checkIcons, item => {
         item.addEventListener('click', handleCheckBox, false);
       });
-      [].forEach.call(deleteIcons, function(item) {
+      [].forEach.call(deleteIcons, item => {
         item.addEventListener('click', handleDelete, false);
       });
-      [].forEach.call(editIcons, function(item) {
+      [].forEach.call(editIcons, item => {
         item.addEventListener('click', handleEdit, false);
       });
-      [].forEach.call(saveIcons, function(item) {
+      [].forEach.call(saveIcons, item => {
         item.addEventListener('click', handleSave, false);
       });
     }
@@ -99,19 +99,19 @@ function App() {
   }
 
   function handleDragEnd() {
-    [].forEach.call(listItems, function(item) {
+    [].forEach.call(listItems, item => {
       item.classList.remove('over');
     });
-    [].forEach.call(deleteIcons, function(item) {
+    [].forEach.call(deleteIcons, item => {
       item.addEventListener('click', handleDelete, false);
     });
-    [].forEach.call(checkIcons, function(item) {
+    [].forEach.call(checkIcons, item => {
       item.addEventListener('click', handleCheckBox, false);
     });
-    [].forEach.call(editIcons, function(item) {
+    [].forEach.call(editIcons, item => {
       item.addEventListener('click', handleEdit, false);
     });
-    [].forEach.call(saveIcons, function(item) {
+    [].forEach.call(saveIcons, item => {
       item.addEventListener('click', handleSave, false);
     });
   }
