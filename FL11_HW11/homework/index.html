@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Homework 11 - TODO Cat List</title>
+  <link rel="stylesheet" href="./assets/material-icons/material-icons.css">
+  <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+  <div id="root">
+    <h1 class = "title">TODO Cat List</h1>
+    <h2 class = "notification hidden">Maximum items per list is reached</h2>
+    <div class = "add-container">
+        <input class = "big-input" type="text" placeholder="Add new action" />
+        <span id = "add-button"><i class="material-icons big-icon">add_box</i></span>
+      </div>
+    <div class = "divider"></div>
+    <div class = "container">
+      <div class = "list-item zero hidden" draggable="true">
+        <span><i class="material-icons icon check-icon">crop_din</i></span>
+        <span><i class="material-icons icon done-icon hidden">done</i></span>
+        <span class = "text-item">Find the cat</span>
+        <input class = "small-input hidden" type="text">
+        <span><i class="material-icons icon edit-icon">edit</i></span>
+        <span><i class="material-icons icon save-icon hidden">save</i></span>
+        <span class="delete"><i class="material-icons icon delete-icon">delete</i></span>
+      </div>
+   </div>
+  </div>
+  <script src="./src/app.js"></script>
+</body>
+</html>

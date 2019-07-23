@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
+}
+
+.title {
+  color: lightskyblue;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.notification {
+  color: red;
+  text-align: center;
+  font-size: 14px;
+  margin: 0 0 5px 0;
+  visibility: visible;
+}
+
+.notification.hidden {
+  visibility: hidden;
+}
+
+.divider {
+  height: 5px;
+  background-color: lightskyblue;
+  opacity: .2;
+  margin: 10px;
+}
+
+.big-input {
+  color: lightskyblue;
+  padding: 10px;
+  border: 1px solid lightgrey;
+  border-radius: 4px;
+  width: 100%;
+}
+
+#add-button {
+  padding: 5px;
+}
+
+.big-icon {
+  font-size: 36px;
+  color: lightgray;
+}
+
+.big-icon.active {
+  color: lightskyblue;
+}
+
+.add-container {
+  display: flex;
+}
+
+.small-input.hidden {
+  display: none;
+}
+
+.save-icon.hidden {
+  display: none;
+}
+.edit-icon.hidden {
+  display: none;
+}
+.text-item.hidden {
+  display: none;
+}
+
+.icon {
+  color: lightskyblue;
+}
+
+.delete {
+  margin-left: auto;
+}
+
+.save {
+  margin-right: auto;
+}
+
+.list-item {
+  display: flex;
+}
+.list-item.over {
+  outline: 1px dotted lightgray;
+}
+
+.list-item.hidden {
+  display: none;
+}
+
+.check-icon.hidden {
+  display: none;
+}
+
+.done-icon.hidden{
+  display: none;
+}
