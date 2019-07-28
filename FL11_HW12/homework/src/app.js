@@ -188,7 +188,7 @@ function handleAddSave() {
       todoItems.push(newTask);
 
       localStorage.setItem('todoItems', JSON.stringify(todoItems));
-      location.hash = '#/';
+      location.hash = '/';
     } else {
       if (navigator.appVersion.indexOf('Chrome') !== minusOne) {
         dangerAlertWindow.classList.add('danger-alert-right');
@@ -220,7 +220,7 @@ function handleModifySave() {
         }
       }
       localStorage.setItem('todoItems', JSON.stringify(todoItems));
-      location.hash = '#/';
+      location.hash = '/';
     } else {
       if (navigator.appVersion.indexOf('Chrome') !== minusOne) {
         dangerAlertWindow.classList.add('danger-alert-right');
@@ -239,7 +239,7 @@ function handleChange(e) {
   let listItem = e.target.parentElement;
 
   modifyId = parseInt(listItem.getAttribute('data-id'));
-  location.hash = `#/modify/:${modifyId}`;
+  location.hash = `/modify/:${modifyId}`;
 }
 
 let saveAddButton = document.getElementsByClassName('save-add-btn');
