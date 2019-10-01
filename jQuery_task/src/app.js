@@ -7,7 +7,7 @@ $(document).ready(function() {
       if (/^\d+$/.test(oldValue)) {
         newValue = '+' + oldValue;
         inputElem.val(newValue);
+        this.submit();
       }
-      this.submit();
   });
 }); 
